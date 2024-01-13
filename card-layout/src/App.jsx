@@ -51,7 +51,6 @@ function App() {
                 <p className="tagline">{card.tagline}</p>
                 <p className="description">{card.description}</p>
                 <Button
-                  rightIcon={<ArrowForwardIcon />}
                   colorScheme="teal"
                   variant="outline"
                 >
