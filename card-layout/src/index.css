@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #0870d137;
+  background-color: #B8F2E6;
   color: #111;
 }
 
@@ -41,17 +41,20 @@ h1{
   flex: 0 0 calc(50% - 45px);
   max-width: calc(50% - 45px);
   width: 100%;
-  background: #ff000028;
+  background: #FFA69E;
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 20px;
   transition: .3s;
   border: 2px solid transparent;
   box-shadow: 100px #111;
+  position: relative;
 }
 
 .card:hover{
   border-color: gray;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
 }
 
 .btn{
@@ -64,10 +67,6 @@ h1{
   cursor:pointer;
   margin-top: 10px;
   display: flex;
-}
-
-.card {
-  position: relative;
 }
 
 .image {
@@ -83,14 +82,23 @@ h1{
 
 .title {
   text-align: center;
+  padding: 4px;
 }
 
 .tagline {
   color: rgba(0, 0, 0, 0.5);
+  padding: 3px;
 }
 
 .description {
   text-align: left;
   z-index: 2;
   width: calc(90% - 30px);
+}
+
+@media(max-width: 700px){
+  .card{
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }

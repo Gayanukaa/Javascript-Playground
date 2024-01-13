@@ -5,7 +5,6 @@ import JerryImage from './images/Jerry.png'
 import PinkPantherImage from './images/PinkPanther.png'
 import WoodyWoodpeckerImage from './images/WoodyWoodpecker.png'
 
-
 function App() {
   const [cards] = useState([
     {
@@ -44,17 +43,15 @@ function App() {
         <div className="container">
           <h1>Responsive Cards Layout</h1>
           <div className="cards">
-            {
-            cards.map((card, i) => (
+            {cards.map((card, i) => (
               <div key={i} className="card">
-                <img className='image' src={card.image} alt={card.title} />
-                <h3 className='title'>{card.title}</h3>
-                <p className='tagline'>{card.tagline}</p>
-                <p className='description'>{card.description}</p>
+                <img className="image" src={card.image} alt={card.title} />
+                <h3 className="title">{card.title}</h3>
+                <p className="tagline">{card.tagline}</p>
+                <p className="description">{card.description}</p>
                 <button className="btn">Know More</button>
               </div>
-              ))
-            }
+            ))}
           </div>
         </div>
       </section>
