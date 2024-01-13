@@ -1,35 +1,65 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [cards] = useState([
+    {
+      title: "Bugs Bunny",
+      tagline: "Warner",
+      image: "card-layout/src/images/Bugs_Bunny.png",
+      description:
+        "Bugs Bunny is an animated cartoon character, created in the late 1930s by Leon Schlesinger Productions and voiced originally by Mel Blanc. Bugs is best known for his starring roles in the Looney Tunes and Merrie Melodies series of animated short films, produced by Warner Bros.",
+    },
+    {
+      title: "Jerry",
+      tagline: "MGM",
+      image: "card-layout/src/images/Jerry.png",
+      description:
+        "Bugs Bunny is an animated cartoon character, created in the late 1930s by Leon Schlesinger Productions and voiced originally by Mel Blanc. Bugs is best known for his starring roles in the Looney Tunes and Merrie Melodies series of animated short films, produced by Warner Bros.",
+    },
+    {
+      title: "Pink Panther",
+      tagline: "Warner",
+      image: "card-layout/src/images/PinkPanther.png",
+      description:
+        "Bugs Bunny is an animated cartoon character, created in the late 1930s by Leon Schlesinger Productions and voiced originally by Mel Blanc. Bugs is best known for his starring roles in the Looney Tunes and Merrie Melodies series of animated short films, produced by Warner Bros.",
+    },
+    {
+      title: "Woody Woodpecker",
+      tagline: "Warner",
+      image: "card-layout/src/images/WoodyWoodpecker.png",
+      description:
+        "Bugs Bunny is an animated cartoon character, created in the late 1930s by Leon Schlesinger Productions and voiced originally by Mel Blanc. Bugs is best known for his starring roles in the Looney Tunes and Merrie Melodies series of animated short films, produced by Warner Bros.",
+    },
+  ]);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div>
+      <section>
+        <div className="container">
+          <h1>Responsive Cards Layout</h1>
+          <div className="cards">
+            {
+            cards.map((card, i) => (
+              <div key={i} className="card">
+                <img src={card.image} alt={card.title} />
+                <h3>
+                  {card.title}
+                </h3>
+                <p>
+                  {card.tagline}
+                </p>
+                <p>
+                  {card.description}
+                </p>
+              </div>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+    </div>
+  );
 }
 
 export default App
