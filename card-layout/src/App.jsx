@@ -1,35 +1,40 @@
 import { useState } from 'react'
 import './App.css'
+import BugsBunnyImage from './images/Bugs_Bunny.png'
+import JerryImage from './images/Jerry.png'
+import PinkPantherImage from './images/PinkPanther.png'
+import WoodyWoodpeckerImage from './images/WoodyWoodpecker.png'
+
 
 function App() {
   const [cards] = useState([
     {
       title: "Bugs Bunny",
-      tagline: "Warner",
-      image: "card-layout/src/images/Bugs_Bunny.png",
+      tagline: "Warner Invention",
+      image: BugsBunnyImage,
       description:
         "Bugs Bunny is an animated cartoon character, created in the late 1930s by Leon Schlesinger Productions and voiced originally by Mel Blanc. Bugs is best known for his starring roles in the Looney Tunes and Merrie Melodies series of animated short films, produced by Warner Bros.",
     },
     {
       title: "Jerry",
-      tagline: "MGM",
-      image: "card-layout/src/images/Jerry.png",
+      tagline: "Tom and Jerry",
+      image: JerryImage,
       description:
-        "Bugs Bunny is an animated cartoon character, created in the late 1930s by Leon Schlesinger Productions and voiced originally by Mel Blanc. Bugs is best known for his starring roles in the Looney Tunes and Merrie Melodies series of animated short films, produced by Warner Bros.",
+        "Jerry is a celebrated and enduring animated character, created by William Hanna and Joseph Barbera. Jerry, along with his larger and dim-witted adversary, Tom, first appeared in the 1940 short 'Puss Gets the Boot' and has since become a cherished figure in the annals of animation history.",
     },
     {
       title: "Pink Panther",
-      tagline: "Warner",
-      image: "card-layout/src/images/PinkPanther.png",
+      tagline: "Classic Comedy",
+      image: PinkPantherImage,
       description:
-        "Bugs Bunny is an animated cartoon character, created in the late 1930s by Leon Schlesinger Productions and voiced originally by Mel Blanc. Bugs is best known for his starring roles in the Looney Tunes and Merrie Melodies series of animated short films, produced by Warner Bros.",
+        "The Pink Panther is a beloved and enduring animated character, created by Friz Freleng and David DePatie. The character first appeared in the 1964 animated short 'The Pink Phink' and has since gone on to become a global icon of comedy and wit.",
     },
     {
       title: "Woody Woodpecker",
-      tagline: "Warner",
-      image: "card-layout/src/images/WoodyWoodpecker.png",
+      tagline: "Lantz Classics",
+      image: WoodyWoodpeckerImage,
       description:
-        "Bugs Bunny is an animated cartoon character, created in the late 1930s by Leon Schlesinger Productions and voiced originally by Mel Blanc. Bugs is best known for his starring roles in the Looney Tunes and Merrie Melodies series of animated short films, produced by Warner Bros.",
+        "Woody Woodpecker is a beloved and enduring animated character, created by Walter Lantz. Woody, an energetic and mischievous red-headed woodpecker, first appeared in the 1940 short 'Knock Knock' and has since become a symbol of humor, creativity, and animation prowess.",
     },
   ]);
 
@@ -42,10 +47,10 @@ function App() {
             {
             cards.map((card, i) => (
               <div key={i} className="card">
-                <img src={card.image} alt={card.title} />
-                <h3>{card.title}</h3>
-                <p>{card.tagline}</p>
-                <p>{card.description}</p>
+                <img className='image' src={card.image} alt={card.title} />
+                <h3 className='title'>{card.title}</h3>
+                <p className='tagline'>{card.tagline}</p>
+                <p className='description'>{card.description}</p>
                 <button className="btn">Know More</button>
               </div>
               ))
