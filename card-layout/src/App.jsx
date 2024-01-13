@@ -43,15 +43,10 @@ function App() {
             cards.map((card, i) => (
               <div key={i} className="card">
                 <img src={card.image} alt={card.title} />
-                <h3>
-                  {card.title}
-                </h3>
-                <p>
-                  {card.tagline}
-                </p>
-                <p>
-                  {card.description}
-                </p>
+                <h3>{card.title}</h3>
+                <p>{card.tagline}</p>
+                <p>{card.description}</p>
+                <button className="btn">Know More</button>
               </div>
               ))
             }
