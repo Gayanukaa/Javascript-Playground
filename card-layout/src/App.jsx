@@ -1,9 +1,10 @@
-import { useState } from 'react'
-import './App.css'
-import BugsBunnyImage from './images/Bugs_Bunny.png'
-import JerryImage from './images/Jerry.png'
-import PinkPantherImage from './images/PinkPanther.png'
-import WoodyWoodpeckerImage from './images/WoodyWoodpecker.png'
+import { useState } from "react";
+import "./App.css";
+import BugsBunnyImage from "./images/Bugs_Bunny.png";
+import JerryImage from "./images/Jerry.png";
+import PinkPantherImage from "./images/PinkPanther.png";
+import WoodyWoodpeckerImage from "./images/WoodyWoodpecker.png";
+import { Button, ButtonGroup } from "@chakra-ui/react";
 
 function App() {
   const [cards] = useState([
@@ -49,7 +50,13 @@ function App() {
                 <h3 className="title">{card.title}</h3>
                 <p className="tagline">{card.tagline}</p>
                 <p className="description">{card.description}</p>
-                <button className="btn">Know More</button>
+                <Button
+                  rightIcon={<ArrowForwardIcon />}
+                  colorScheme="teal"
+                  variant="outline"
+                >
+                  Call us
+                </Button>
               </div>
             ))}
           </div>
@@ -59,4 +66,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
